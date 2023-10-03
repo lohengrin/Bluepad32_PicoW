@@ -13,11 +13,12 @@ set(includes
 ./include/uni_platform_unijoysticle_c64.h
 ./include/uni_hid_parser_wii.h
 ./include/uni_bt_defines.h
+./include/uni_bt_allowlist.h
 ./include/uni_bt_conn.h
 ./include/uni_controller.h
 ./include/uni_platform_arduino_bootstrap.h
 ./include/uni_bluetooth.h
-./include/uni_ble.h
+./include/uni_bt_le.h
 ./include/uni_platform_pc_debug.h
 ./include/uni_hid_parser_8bitdo.h
 ./include/uni_hid_parser_ds5.h
@@ -60,8 +61,9 @@ set(includes
 )
 
 set(srcs "uni_balance_board.c"
-         "uni_ble.c"
+         "uni_bt_le.c"
          "uni_bluetooth.c"
+         "uni_bt_allowlist.c"
          "uni_bt_conn.c"
          "uni_bt_sdp.c"
          "uni_bt_setup.c"
