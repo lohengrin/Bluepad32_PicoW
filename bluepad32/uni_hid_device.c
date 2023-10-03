@@ -43,7 +43,7 @@ limitations under the License.
 #include "uni_hid_parser_ouya.h"
 #include "uni_hid_parser_psmove.h"
 #include "uni_hid_parser_smarttvremote.h"
-// #include "uni_hid_parser_steam.h"
+#include "uni_hid_parser_steam.h"
 #include "uni_hid_parser_switch.h"
 #include "uni_hid_parser_wii.h"
 #include "uni_hid_parser_xboxone.h"
@@ -781,12 +781,12 @@ void uni_hid_device_guess_controller_type_from_pid_vid(uni_hid_device_t *d)
         d->report_parser.device_dump = uni_hid_parser_switch_device_dump;
         logi("Device detected as Nintendo Switch Pro controller: 0x%02x\n", type);
         break;
-    // case CONTROLLER_TYPE_SteamController:
-    //     d->report_parser.setup = uni_hid_parser_steam_setup;
-    //     d->report_parser.init_report = uni_hid_parser_steam_init_report;
-    //     d->report_parser.parse_input_report = uni_hid_parser_steam_parse_input_report;
-    //     logi("Device detected as Steam: 0x%02x\n", type);
-    //     break;
+    case CONTROLLER_TYPE_SteamController:
+        d->report_parser.setup = uni_hid_parser_steam_setup;
+        d->report_parser.init_report = uni_hid_parser_steam_init_report;
+        d->report_parser.parse_input_report = uni_hid_parser_steam_parse_input_report;
+        logi("Device detected as Steam: 0x%02x\n", type);
+        break;
     case CONTROLLER_TYPE_GenericMouse:
         d->report_parser.setup = uni_hid_parser_mouse_setup;
         d->report_parser.parse_input_report = uni_hid_parser_mouse_parse_input_report;
