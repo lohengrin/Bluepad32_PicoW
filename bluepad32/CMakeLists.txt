@@ -49,6 +49,7 @@ set(includes
 ./include/uni_hid_parser_android.h
 ./include/uni_hid_parser_nimbus.h
 ./include/uni_hid_parser_ouya.h
+./include/uni_hid_parser_psmove.h
 ./include/hid_usage.h
 ./include/uni_hid_parser_xboxone.h
 ./include/uni_platform.h
@@ -93,6 +94,7 @@ set(srcs "uni_balance_board.c"
          "uni_hid_parser_smarttvremote.c"
          "uni_hid_parser_switch.c"
          "uni_hid_parser_wii.c"
+         "uni_hid_parser_psmove.c"
          "uni_hid_parser_xboxone.c"
          "uni_joystick.c"
          "uni_log.c"
