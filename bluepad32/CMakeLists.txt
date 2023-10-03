@@ -59,6 +59,8 @@ set(includes
 ./include/uni_hid_parser.h
 ./include/uni_hid_parser_smarttvremote.h
 ./include/sdkconfig.h
+./include/uni_virtual_device.h
+./include/uni_error.h
 )
 
 set(srcs "uni_balance_board.c"
@@ -109,7 +111,8 @@ set(srcs "uni_balance_board.c"
          "uni_property.c"
          "uni_property_mem.c"
 #         "uni_property_nvs.c"
-"uni_utils.c"
+         "uni_utils.c"
+         "uni_virtual_device.c"
 # PICO
          "uni_platform_pico.c"
          )
