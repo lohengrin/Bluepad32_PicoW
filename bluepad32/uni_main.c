@@ -19,6 +19,7 @@ limitations under the License.
 #include "uni_main.h"
 
 #include "sdkconfig.h"
+#include "uni_bt_allowlist.h"
 #include "uni_bt_setup.h"
 #include "uni_config.h"
 #include "uni_console.h"
@@ -27,13 +28,15 @@ limitations under the License.
 #include "uni_platform.h"
 #include "uni_property.h"
 #include "uni_version.h"
+#include "uni_virtual_device.h"
 
 // Main entry point, runs forever
-int uni_main(int argc, const char** argv) {
+int uni_main(int argc, const char **argv)
+{
     logi("Bluepad32 (C) 2016-2023 Ricardo Quesada and contributors.\n");
     logi("Version: v" UNI_VERSION "\n");
 
-    // Honoring with BT copyright
+    // Honoring BTStack license
     logi("BTStack: Copyright (C) 2017 BlueKitchen GmbH.\n");
 
     uni_property_init();
@@ -42,10 +45,12 @@ int uni_main(int argc, const char** argv) {
 
     // Continue with bluetooth setup.
     uni_bt_setup();
+    uni_bt_allowlist_init();
+    uni_virtual_device_init();
 
 #if CONFIG_BLUEPAD32_USB_CONSOLE_ENABLE
     uni_console_init();
-#endif  // CONFIG_BLUEPAD32_CONSOLE_ENABLE
+#endif // CONFIG_BLUEPAD32_CONSOLE_ENABLE
 
     // Does not return.
     btstack_run_loop_execute();
