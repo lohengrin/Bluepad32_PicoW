@@ -14,6 +14,7 @@ set(includes
 ./include/uni_hid_parser_wii.h
 ./include/uni_bt_defines.h
 ./include/uni_bt_allowlist.h
+./include/uni_bt_bredr.h
 ./include/uni_bt_conn.h
 ./include/uni_controller.h
 ./include/uni_platform_arduino_bootstrap.h
@@ -64,6 +65,7 @@ set(srcs "uni_balance_board.c"
          "uni_bt_le.c"
          "uni_bt.c"
          "uni_bt_allowlist.c"
+         "uni_bt_bredr.c"
          "uni_bt_conn.c"
          "uni_bt_sdp.c"
          "uni_bt_setup.c"

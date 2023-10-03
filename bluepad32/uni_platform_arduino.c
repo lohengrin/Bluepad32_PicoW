@@ -344,7 +344,7 @@ int arduino_set_rumble(int idx, uint8_t force, uint8_t duration) {
 }
 
 int arduino_forget_bluetooth_keys(void) {
-    uni_bluetooth_del_keys_safe();
+    uni_bt_del_keys_safe();
     return UNI_ARDUINO_OK;
 }
 

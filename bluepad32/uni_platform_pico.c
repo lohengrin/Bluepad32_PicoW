@@ -331,7 +331,7 @@ int pico_set_rumble(int idx, uint8_t force, uint8_t duration) {
 }
 
 int pico_forget_bluetooth_keys(void) {
-    uni_bluetooth_del_keys_safe();
+    uni_bt_del_keys_safe();
     return UNI_PICO_OK;
 }
 

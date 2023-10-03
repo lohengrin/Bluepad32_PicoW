@@ -298,13 +298,13 @@ int uni_bt_setup(void)
     logi("BR/EDR support: enabled\n");
     logi("BLE support: %s\n", uni_bt_le_is_enabled() ? "enabled" : "disabled");
 
-    l2cap_register_service(uni_bluetooth_packet_handler, BLUETOOTH_PSM_HID_INTERRUPT, UNI_BT_L2CAP_CHANNEL_MTU,
+    l2cap_register_service(uni_bt_packet_handler, BLUETOOTH_PSM_HID_INTERRUPT, UNI_BT_L2CAP_CHANNEL_MTU,
                            security_level);
-    l2cap_register_service(uni_bluetooth_packet_handler, BLUETOOTH_PSM_HID_CONTROL, UNI_BT_L2CAP_CHANNEL_MTU,
+    l2cap_register_service(uni_bt_packet_handler, BLUETOOTH_PSM_HID_CONTROL, UNI_BT_L2CAP_CHANNEL_MTU,
                            security_level);
 
     // register for HCI events
-    hci_event_callback_registration.callback = &uni_bluetooth_packet_handler;
+    hci_event_callback_registration.callback = &uni_bt_packet_handler;
     hci_add_event_handler(&hci_event_callback_registration);
 
     // Enable RSSI and EIR for gap_inquiry
