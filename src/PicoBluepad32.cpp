@@ -4,7 +4,7 @@
 #include "PicoBluepad32.h"
 #include "sdkconfig.h"
 #include <inttypes.h>
-#include <uni_bluetooth.h>
+#include <uni_bt.h>
 #include <uni_log.h>
 #include <uni_platform_arduino.h>
 #include <uni_version.h>

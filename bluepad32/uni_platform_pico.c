@@ -21,7 +21,7 @@ limitations under the License.
 #ifdef CONFIG_BLUEPAD32_PLATFORM_PICO
 #include "uni_platform_pico.h"
 
-#include "uni_bluetooth.h"
+#include "uni_bt.h"
 #include "uni_common.h"
 #include "uni_config.h"
 #include "uni_gamepad.h"

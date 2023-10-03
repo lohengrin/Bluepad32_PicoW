@@ -27,7 +27,7 @@ limitations under the License.
 #include <nvs_flash.h>
 
 #include "sdkconfig.h"
-#include "uni_bluetooth.h"
+#include "uni_bt.h"
 #include "uni_common.h"
 #include "uni_config.h"
 #include "uni_gamepad.h"

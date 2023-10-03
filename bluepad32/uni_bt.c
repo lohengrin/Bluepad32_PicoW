@@ -52,7 +52,7 @@
  * this file.
  */
 
-#include "uni_bluetooth.h"
+#include "uni_bt.h"
 
 #include <btstack.h>
 #include <btstack_config.h>

@@ -40,7 +40,7 @@ limitations under the License.
 #include "cmd_system.h"
 #include "sdkconfig.h"
 #include "uni_balance_board.h"
-#include "uni_bluetooth.h"
+#include "uni_bt.h"
 #include "uni_common.h"
 #include "uni_config.h"
 #include "uni_controller.h"

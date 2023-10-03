@@ -24,7 +24,7 @@ limitations under the License.
 
 #include "sdkconfig.h"
 #include "uni_bt_le.h"
-#include "uni_bluetooth.h"
+#include "uni_bt.h"
 #include "uni_bt_defines.h"
 #include "uni_bt_sdp.h"
 #include "uni_common.h"

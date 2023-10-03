@@ -32,7 +32,7 @@ limitations under the License.
 #include <freertos/semphr.h>
 
 #include "cmd_system.h"
-#include "uni_bluetooth.h"
+#include "uni_bt.h"
 #include "uni_common.h"
 #include "uni_config.h"
 #include "uni_gamepad.h"
