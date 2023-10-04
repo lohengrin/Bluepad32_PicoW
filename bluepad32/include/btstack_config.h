@@ -25,8 +25,8 @@
 #define MAX_NR_HID_HOST_CONNECTIONS 1
 #define MAX_NR_HIDS_CLIENTS 1
 #define MAX_NR_HFP_CONNECTIONS 1
-#define MAX_NR_L2CAP_CHANNELS 4
-#define MAX_NR_L2CAP_SERVICES 3
+#define MAX_NR_L2CAP_CHANNELS 6
+#define MAX_NR_L2CAP_SERVICES 5
 #define MAX_NR_RFCOMM_CHANNELS 1
 #define MAX_NR_RFCOMM_MULTIPLEXERS 1
 #define MAX_NR_RFCOMM_SERVICES 1
@@ -51,7 +51,8 @@
 #define NVM_NUM_LINK_KEYS 16
 
 // We don't give btstack a malloc, so use a fixed-size ATT DB.
-#define MAX_ATT_DB_SIZE 512
+// #define MAX_ATT_DB_SIZE 512
+#define HAVE_MALLOC
 
 // BTstack HAL configuration
 #define HAVE_EMBEDDED_TIME_MS
