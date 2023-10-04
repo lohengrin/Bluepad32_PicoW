@@ -22,6 +22,7 @@ limitations under the License.
 // For more configurations, please look at the Kconfig file, or just do:
 // "idf.py menuconfig" -> "Component config" -> "Bluepad32"
 #define UNI_ENABLE_BLE 1
+#define UNI_ENABLE_BREDR 1
 
 // How verbose the logging should be.
 // It is safe to leave UNI_LOG_DEBUG disabled (unless you are a developer).
@@ -29,4 +30,4 @@ limitations under the License.
 #define UNI_LOG_INFO 1
 #define UNI_LOG_DEBUG 0
 
-#endif  // UNI_CONFIG_H
+#endif // UNI_CONFIG_H
