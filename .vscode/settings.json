@@ -57,7 +57,15 @@
         "uni_hid_device_vendors.h": "c",
         "uni_platform.h": "c",
         "uni_config.h": "c",
-        "uni_platform_pico.h": "c"
+        "uni_platform_pico.h": "c",
+        "stdbool.h": "c",
+        "sdkconfig.h": "c",
+        "uni_bluetooth.h": "c",
+        "uni_hid_parser.h": "c",
+        "uni_bt_sdp.h": "c",
+        "uni_bt.h": "c",
+        "uni_bt_bredr.h": "c",
+        "uni_hid_device.h": "c"
     },
     // These settings tweaks to the cmake plugin will ensure
     // that you debug using cortex-debug instead of trying to launch

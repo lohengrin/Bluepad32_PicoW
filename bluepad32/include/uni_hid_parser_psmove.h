@@ -1,7 +1,7 @@
 /****************************************************************************
 http://retro.moe/unijoysticle2
 
-Copyright 2022 Ricardo Quesada
+Copyright 2019 Ricardo Quesada
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -16,23 +16,19 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ****************************************************************************/
 
-#ifndef UNI_BT_SETUP_H
-#define UNI_BT_SETUP_H
-
-#ifdef __cplusplus
-extern "C"
-{
-#endif
+#ifndef UNI_HID_PARSER_PSMOVE_H
+#define UNI_HID_PARSER_PSMOVE_H
 
 #include <stdbool.h>
 #include <stdint.h>
 
-    int uni_bt_setup(void);
-    bool uni_bt_setup_is_ready(void);
-    void uni_bt_setup_packet_handler(uint8_t packet_type, uint16_t channel, uint8_t *packet, uint16_t size);
+#include "uni_hid_parser.h"
 
-#ifdef __cplusplus
-}
-#endif
+// For PS Move controller
+void uni_hid_parser_psmove_setup(struct uni_hid_device_s *d);
+void uni_hid_parser_psmove_init_report(struct uni_hid_device_s *d);
+void uni_hid_parser_psmove_parse_input_report(struct uni_hid_device_s *d, const uint8_t *report, uint16_t len);
+void uni_hid_parser_psmove_set_rumble(struct uni_hid_device_s *d, uint8_t value, uint8_t duration);
+void uni_hid_parser_psmove_set_lightbar_color(struct uni_hid_device_s *d, uint8_t r, uint8_t g, uint8_t b);
 
-#endif // UNI_BT_SETUP_H
+#endif // UNI_HID_PARSER_PSMOVE_H
